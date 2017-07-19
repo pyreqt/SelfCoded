@@ -27,3 +27,6 @@ for i in range(0,noofcases):
    dectobin(decimal)
    print(decimal,":",''.join(str(e) for e in a[::-1]))
    a.clear()
+
+   
+   #This is done to try pull
