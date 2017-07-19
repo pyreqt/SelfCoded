@@ -1,21 +1,29 @@
+def dectobin(n):
 
-def binary(n):
+   if(n==1):
+     a.append(n)
+     return 1
 
-      if n==1:
-        a.append(n)
-        return
-
-      elif (n % 2 in (0, 1)):
-        a.append(n%2)
-        n_nxt=int(n/2)
-        binary(n_nxt)
-
+   elif(n%2 in(0,1)):
+      a.append(n%2)
+      dectobin(int(n/2))
 a=[]
-items=[int(x) for x in input("Enter the test cases: ").split(' ')]     #
-for i in (items):
-  binary(i)
-  string = ''.join(str(e) for e in a[::-1])  # convert list to string using join, if list has string just ''.join(list)
-  print(i,':',string)                              #list slicing to print in reverse order
-  a.clear()                                   # for the next number to be fed into the list
+while True:
+   noofcases = int(input("enter the no of test cases: "))
+   if noofcases>100:
+    print("Error: enter a value between 0<=t<= 100")
+    continue
+   else:
+     break
 
-# well 2 nd commit
+for i in range(0,noofcases):
+   while True:
+     decimal=int(input("enter decimal: "))
+     if (decimal<0 or decimal>100):
+         print("Enter values between 0 and 100")
+         continue
+     else:
+         break
+   dectobin(decimal)
+   print(decimal,":",''.join(str(e) for e in a[::-1]))
+   a.clear()
