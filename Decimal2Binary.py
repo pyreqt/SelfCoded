@@ -18,3 +18,4 @@ for i in (items):
   print(i,':',string)                              #list slicing to print in reverse order
   a.clear()                                   # for the next number to be fed into the list
 
+# well 2 nd commit
